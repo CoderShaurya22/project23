@@ -62,13 +62,13 @@ function draw() {
 	}	
 	
 	if(keyCode === LEFT_ARROW){
-	helicopterSprite.x=helicopterSprite.x-4;
-	packageSprite.x=packageSprite.x-20;
+	helicopterSprite.x=helicopterSprite.x-20;
+	Matter.Body.translate(packageBody,{x:-20,y:0})
 	}
     
 	if(keyCode=== RIGHT_ARROW){
-	helicopterSprite.x=helicopterSprite.x+4;
-	packageSprite.x=packageSprite.x+20;
+	helicopterSprite.x=helicopterSprite.x+20;
+    Matter.Body.translate(packageBody,{x:+20,y:0})
 	}
 
 
